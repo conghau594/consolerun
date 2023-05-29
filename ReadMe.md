@@ -4,11 +4,11 @@ This project was to learn and practise C languge's concepts at the first time.
 
 The project started from 1/2023 and ended up at 3/2023
 
-Link to preview video and released app: 
+Link to preview video and released app: https://drive.google.com/drive/folders/13EDO-kMyBjLA9YAsU7xwvX_00MPbWCDQ?usp=sharing
 
 The key to control game:
 
- ----------------------------------------------------
+ ____________________________________________________
 |           Key          |         Be used to        |
  ----------------------------------------------------
 | Up arrow               | Jump						 |
