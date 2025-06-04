@@ -18,7 +18,7 @@ int main(void) {
     // Use cfi to set the screen buffer's new font
     SetCurrentConsoleFontEx(hStdout, FALSE, &cfi);
 
-    //delete cursor
+    //hide cursor
     const CONSOLE_CURSOR_INFO CUR_INFO = { 10, 0 };
     SetConsoleCursorInfo(hStdout, &CUR_INFO);
 
