@@ -4,7 +4,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <conio.h>
+#ifdef _WIN32
 #include <Windows.h>
+#else
+#include "win_stub.h"
+#endif
 #include <time.h>
 
 
@@ -30,8 +34,13 @@
 #define KEY_ENT 13
 
 
+#ifdef DEFINE_GLOBALS
 short restarted = 1;
 short paused = 0;
+#else
+extern short restarted;
+extern short paused;
+#endif
 
 typedef enum _MAN_STATE {
     STOOPING = -1,
