@@ -58,14 +58,14 @@ int main(void) {
         system("cls");
 
         //clear input buffer
-        FlushConsoleInputBuffer(hStdout);
+        FlushConsoleInputBuffer(hStdin);
 
         drawRoute(ROUTE_LINE);
         MPOS man3 = drawStandingMan(START_ROUTE + 2, ROUTE_LINE-1);
 
         Sleep(500);
         moveForward(&man3, 5);
-        FlushConsoleInputBuffer(hStdout);
+        FlushConsoleInputBuffer(hStdin);
 
         int* isDead = &(man3.isDead);
 
@@ -77,7 +77,7 @@ int main(void) {
         for (;;) {
 
             if (*isDead) {
-                FlushConsoleInputBuffer(hStdout);
+                FlushConsoleInputBuffer(hStdin);
                 break;
             }
 
@@ -162,10 +162,8 @@ void printScore(MPOS man) {
 
 void pauseGame(void) {
     while (paused) {
-        char key = _getch();
-        if (key == 'P') break;
+        Sleep(1);
     }
-    return;
 }
 
 
