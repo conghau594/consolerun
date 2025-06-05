@@ -1,6 +1,8 @@
+#define DEFINE_GLOBALS
 #include "header.h"
 
 
+#ifndef TESTING
 int main(void) {
     HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
     HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
@@ -138,6 +140,7 @@ int main(void) {
     }
     return 0;
 }
+#endif /* TESTING */
 
 
 void drawRoute(INT yFloor) {
